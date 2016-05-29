@@ -63,6 +63,7 @@
             this.dataGridLength1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.closeTableButton = new System.Windows.Forms.Button();
             this.backTableButton = new System.Windows.Forms.Button();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.searchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
@@ -87,7 +88,8 @@
             this.functionsToolStripMenuItem,
             this.exercisesToolStripMenuItem,
             this.signInToolStripMenuItem,
-            this.cabinetToolStripMenuItem});
+            this.cabinetToolStripMenuItem,
+            this.logOutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -195,6 +197,7 @@
             // searchBtn
             // 
             this.searchBtn.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.searchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchBtn.Location = new System.Drawing.Point(48, 92);
             this.searchBtn.Name = "searchBtn";
@@ -290,6 +293,7 @@
             // urbanClose
             // 
             this.urbanClose.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.urbanClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.urbanClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.urbanClose.Location = new System.Drawing.Point(201, 0);
             this.urbanClose.Margin = new System.Windows.Forms.Padding(0);
@@ -384,6 +388,7 @@
             // closeTableButton
             // 
             this.closeTableButton.BackColor = System.Drawing.Color.White;
+            this.closeTableButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeTableButton.Location = new System.Drawing.Point(718, 32);
             this.closeTableButton.Name = "closeTableButton";
             this.closeTableButton.Size = new System.Drawing.Size(36, 34);
@@ -396,6 +401,7 @@
             // backTableButton
             // 
             this.backTableButton.BackColor = System.Drawing.Color.White;
+            this.backTableButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backTableButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backTableButton.Location = new System.Drawing.Point(718, 72);
             this.backTableButton.Name = "backTableButton";
@@ -405,6 +411,15 @@
             this.backTableButton.UseVisualStyleBackColor = false;
             this.backTableButton.Visible = false;
             this.backTableButton.Click += new System.EventHandler(this.backTableButton_Click);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Visible = false;
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -422,6 +437,7 @@
             this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -476,6 +492,7 @@
         public System.Windows.Forms.ToolStripMenuItem signInToolStripMenuItem;
         private System.Windows.Forms.Button closeTableButton;
         private System.Windows.Forms.Button backTableButton;
+        public System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         
     }
 }

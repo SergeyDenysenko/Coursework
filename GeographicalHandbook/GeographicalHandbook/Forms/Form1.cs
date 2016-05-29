@@ -48,9 +48,9 @@ namespace GeographicalHandbook
             infoObject.countryImg.ImageLocation = "images/" + clickedObject.Name + ".png";
             infoObject.flagImg.ImageLocation = "images/" + clickedObject.Name + "Flag.png";
             infoObject.objName.Text = clickedObject.Name;
-            infoObject.objPop.Text = clickedObject.Population.ToString();
+            infoObject.objPop.Text = clickedObject.Population.ToString() + " ppl";
             infoObject.objCapital.Text = clickedObject.Capital;
-            infoObject.objArea.Text = clickedObject.Area.ToString();
+            infoObject.objArea.Text = clickedObject.Area.ToString() + " sq. km.";
             infoObject.Show();
             for (i = 0; i < clickedObject.Length; i++)
             {
@@ -208,6 +208,14 @@ namespace GeographicalHandbook
             {
                 dataGridView1.Rows.Add(earth[i].Name, earth[i].Population, earth[i].Area, earth[i].Length);
             }
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            currentUser = null;
+            logOutToolStripMenuItem.Visible = false;
+            signInToolStripMenuItem.Visible = true;
+            cabinetToolStripMenuItem.Visible = false;
         }
     }
 }

@@ -44,11 +44,11 @@
             this.curName = new System.Windows.Forms.Label();
             this.curPass = new System.Windows.Forms.Label();
             this.curLogin = new System.Windows.Forms.Label();
-            this.marks = new System.Windows.Forms.Label();
             this.marksDataGrid = new System.Windows.Forms.DataGridView();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.percentage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.marksDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +66,7 @@
             // settingsBtn
             // 
             this.settingsBtn.BackColor = System.Drawing.Color.White;
+            this.settingsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.settingsBtn.Location = new System.Drawing.Point(423, 4);
             this.settingsBtn.Name = "settingsBtn";
             this.settingsBtn.Size = new System.Drawing.Size(158, 44);
@@ -91,7 +92,7 @@
             this.panel1.Controls.Add(this.curName);
             this.panel1.Controls.Add(this.curPass);
             this.panel1.Controls.Add(this.curLogin);
-            this.panel1.Location = new System.Drawing.Point(108, 73);
+            this.panel1.Location = new System.Drawing.Point(105, 185);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(378, 204);
             this.panel1.TabIndex = 10;
@@ -100,6 +101,7 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(281, 46);
             this.button2.Name = "button2";
@@ -111,6 +113,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(353, 0);
             this.button1.Name = "button1";
@@ -122,6 +125,7 @@
             // 
             // changer
             // 
+            this.changer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.changer.Location = new System.Drawing.Point(194, 160);
             this.changer.Name = "changer";
@@ -143,6 +147,7 @@
             // 
             // changeData
             // 
+            this.changeData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changeData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.changeData.Location = new System.Drawing.Point(12, 160);
             this.changeData.Name = "changeData";
@@ -244,15 +249,6 @@
             this.curLogin.Text = "Login:";
             this.curLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // marks
-            // 
-            this.marks.AutoSize = true;
-            this.marks.Location = new System.Drawing.Point(31, 86);
-            this.marks.Name = "marks";
-            this.marks.Size = new System.Drawing.Size(35, 13);
-            this.marks.TabIndex = 3;
-            this.marks.Text = "label1";
-            // 
             // marksDataGrid
             // 
             this.marksDataGrid.AllowDrop = true;
@@ -262,7 +258,7 @@
             this.date,
             this.mark,
             this.percentage});
-            this.marksDataGrid.Location = new System.Drawing.Point(12, 102);
+            this.marksDataGrid.Location = new System.Drawing.Point(5, 120);
             this.marksDataGrid.Name = "marksDataGrid";
             this.marksDataGrid.Size = new System.Drawing.Size(346, 210);
             this.marksDataGrid.TabIndex = 0;
@@ -283,14 +279,25 @@
             this.percentage.HeaderText = "Percentage";
             this.percentage.Name = "percentage";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(8, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "History of tests:";
+            // 
             // Cabinet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 412);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.marksDataGrid);
-            this.Controls.Add(this.marks);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.settingsBtn);
             this.Controls.Add(this.personalData);
@@ -324,10 +331,10 @@
         private System.Windows.Forms.Button changer;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label marks;
         private System.Windows.Forms.DataGridView marksDataGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewTextBoxColumn mark;
         private System.Windows.Forms.DataGridViewTextBoxColumn percentage;
+        private System.Windows.Forms.Label label1;
     }
 }

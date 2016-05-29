@@ -21,12 +21,13 @@ namespace GeographicalHandbook
         public Earth earth;
         private void button1_Click(object sender, EventArgs e)
         {
-            User current = Methods.Authorization2(login.Text, password.Text);
+            User current = Methods.Authorization(login.Text, password.Text);
             if (current != null)
             {
                 MainForm f = (MainForm)this.Owner;
                 f.signInToolStripMenuItem.Visible = false;
                 f.cabinetToolStripMenuItem.Visible = true;
+                f.logOutToolStripMenuItem.Visible = true;
                 f.currentUser = current;
                 this.Close();
             }
@@ -53,6 +54,14 @@ namespace GeographicalHandbook
                     break;
                 }
             }
+            foreach (Control cur in regPage.Controls)
+            {
+                if (cur is TextBox && cur.Text.IndexOf("&") != -1)
+                {
+                    errorLabel.Text += "Don't use symbol" + Environment.NewLine;
+                    break;
+                }
+            }
             if (Methods.SearchLogin(logReg.Text))
             {
                 logReg.ForeColor = Color.Red;
@@ -63,6 +72,7 @@ namespace GeographicalHandbook
                 errorLabel.Text += "Passwords are not Equal \n";
                 passReg2.ForeColor = passReg.ForeColor = Color.Red; 
             }
+            
             if (passReg2.Text.Length < 6) 
             {
                 errorLabel.Text += "Password is too short \n";

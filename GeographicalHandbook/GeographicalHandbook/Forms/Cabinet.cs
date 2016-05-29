@@ -25,7 +25,6 @@ namespace GeographicalHandbook
             personalData.Text = string.Format("Hello, {0} {1}!", user.Name, user.Surname);
             int i;
             string[] gameInfo;
-            marks.Text = String.Join("", user.GetMarks(0));
             for (i = 1; i < user.NumOfGames; i++)
             {
                 try
@@ -64,11 +63,11 @@ namespace GeographicalHandbook
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            passLbl.Text = user.Pass;
+            passLbl.Text = user.Password;
         }
         private void changer_Click(object sender, EventArgs e)
         {
-            user.Pass = changedPass.Text;
+            user.Password = changedPass.Text;
             changedPass.Visible = false;
             changeData.Visible = true;
             changer.Visible = false;
